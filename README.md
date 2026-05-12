@@ -11,7 +11,7 @@ Pettiva was designed and built entirely from scratch as a solo project to demons
 ### Authentication
 | Login | Sign Up | Sign Up with Photo |
 |---|---|---|
-| ![Login](screenshots/screen_01_login.png) | ![Sign Up](screenshots/screen_02_signup.png) | ![Sign Up with Photo](screenshots/screen_03_signup_photo.png) |
+| ![Login](lib/screenshots/screen_01_login.png) | ![Sign Up](screenshots/screen_02_signup.png) | ![Sign Up with Photo](screenshots/screen_03_signup_photo.png) |
 
 > Role-based auth: clients and fleet (walkers) log into entirely separate experiences from the same screen. Supports profile photo capture directly from the camera on sign-up.
 
