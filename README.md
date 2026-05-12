@@ -11,7 +11,7 @@ Pettiva was designed and built entirely from scratch as a solo project to demons
 ### Authentication
 | Login | Sign Up | Sign Up with Photo |
 |---|---|---|
-| ![Login](lib/screenshots/screen_01_login.png) | ![Sign Up](screenshots/screen_02_signup.png) | ![Sign Up with Photo](screenshots/screen_03_signup_photo.png) |
+| ![Login](lib/screenshots/screen_01_login.png) | ![Sign Up](lib/screenshots/screen_02_signup.png) | ![Sign Up with Photo](lib/screenshots/screen_03_signup_photo.png) |
 
 > Role-based auth: clients and fleet (walkers) log into entirely separate experiences from the same screen. Supports profile photo capture directly from the camera on sign-up.
 
@@ -20,11 +20,11 @@ Pettiva was designed and built entirely from scratch as a solo project to demons
 ### Home & Pet Management
 | Home Screen | Add Pet | Date of Birth Picker |
 |---|---|---|
-| ![Home](screenshots/screen_05_home_empty.png) | ![Add Pet](screenshots/screen_06_add_pet.png) | ![Date Picker](screenshots/screen_07_datepicker.png) |
+| ![Home](lib/screenshots/screen_05_home_empty.png) | ![Add Pet](lib/screenshots/screen_06_add_pet.png) | ![Date Picker](lib/screenshots/screen_07_datepicker.png) |
 
 | Home with Pet Added |
 |---|
-| ![Home with pet](screenshots/screen_08_home_with_pet.png) |
+| ![Home with pet](lib/screenshots/screen_08_home_with_pet.png) |
 
 > The home screen features animated, auto-shuffling pet fact cards powered by a `Timer` + `AnimatedSwitcher`. Pets are stored per-user and displayed with photo and date of birth.
 
@@ -33,11 +33,11 @@ Pettiva was designed and built entirely from scratch as a solo project to demons
 ### Booking Flow
 | Standard Service | Premium Service | Google Maps Picker |
 |---|---|---|
-| ![Standard](screenshots/screen_09_booking_standard.png) | ![Premium](screenshots/screen_10_booking_premium.png) | ![Maps](screenshots/screen_11_maps.png) |
+| ![Standard](lib/screenshots/screen_09_booking_standard.png) | ![Premium](lib/screenshots/screen_10_booking_premium.png) | ![Maps](lib/screenshots/screen_11_maps.png) |
 
 | Time Picker | Fully Filled Form |
 |---|---|
-| ![Time](screenshots/screen_12_timepicker.png) | ![Filled](screenshots/screen_13_booking_filled.png) |
+| ![Time](lib/screenshots/screen_12_timepicker.png) | ![Filled](lib/screenshots/screen_13_booking_filled.png) |
 
 > The booking screen uses a `SegmentedButton` to toggle between Standard (EGP 50) and Premium (EGP 70) service tiers. Address is auto-filled via Google Geocoding API reverse lookup after the user pins their location on the full-screen map.
 
@@ -46,7 +46,7 @@ Pettiva was designed and built entirely from scratch as a solo project to demons
 ### Order Tracking
 | Order Posted | Walker Accepted |
 |---|---|
-| ![Posted](screenshots/screen_14_order_posted.png) | ![Accepted](screenshots/screen_15_order_accepted.png) |
+| ![Posted](lib/screenshots/screen_14_order_posted.png) | ![Accepted](lib/screenshots/screen_15_order_accepted.png) |
 
 > Order status updates in real time via Firestore `StreamBuilder`. The card UI changes icon, colour, and message the moment a fleet member accepts the order — no refresh needed.
 
@@ -55,7 +55,7 @@ Pettiva was designed and built entirely from scratch as a solo project to demons
 ### Account & Settings
 | Account | Settings (Locked) | Settings (Editing) |
 |---|---|---|
-| ![Account](screenshots/screen_17_account.png) | ![Locked](screenshots/screen_16_settings_locked.png) | ![Editing](screenshots/screen_18_settings_editing.png) |
+| ![Account](lib/screenshots/screen_17_account.png) | ![Locked](lib/screenshots/screen_16_settings_locked.png) | ![Editing](lib/screenshots/screen_18_settings_editing.png) |
 
 ---
 
@@ -64,13 +64,13 @@ This is one of the more technically involved features in the app. Changing your 
 
 | 1. Verification sent (snackbar) | 2. Email arrives in inbox | 3. Firebase confirms in browser | 4. App detects confirmation & updates |
 |---|---|---|---|
-| ![Sent](screenshots/screen_20_settings_verify_sent.png) | ![Email](screenshots/screen_24_verification_email.jpeg) | ![Browser](screenshots/screen_25_email_verified_browser.jpeg) | ![Updated](screenshots/screen_21_settings_email_updated.png) |
+| ![Sent](lib/screenshots/screen_20_settings_verify_sent.png) | ![Email](lib/screenshots/screen_24_verification_email.jpeg) | ![Browser](lib/screenshots/screen_25_email_verified_browser.jpeg) | ![Updated](screenshots/screen_21_settings_email_updated.png) |
 
 After confirming, the user is prompted to log in again with the new email — auth state is fully consistent.
 
 | Re-login with new email | Completed Requests History |
 |---|---|
-| ![Relogin](screenshots/screen_22_login_after_update.png) | ![History](screenshots/screen_23_completed_requests.png) |
+| ![Relogin](lib/screenshots/screen_22_login_after_update.png) | ![History](lib/screenshots/screen_23_completed_requests.png) |
 
 > The verification loop uses `verifyBeforeUpdateEmail()`, then polls `user.reload()` every 3 seconds inside a `while (!verified)` loop. Firestore is only updated after `currentUser.email` matches the new value — ensuring the database never holds an unverified email address.
 
