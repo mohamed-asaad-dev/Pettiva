@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "367300471060",
+    "firebase_url": "https://pettiva-af8e4-default-rtdb.firebaseio.com",
+    "project_id": "pettiva-af8e4",
+    "storage_bucket": "pettiva-af8e4.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:367300471060:android:aef9fc36d81f0d60da7a01",
+        "android_client_info": {
+          "package_name": "com.example.pettiva_v2"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyANW3VQW0WvDnXyoldceN_pUI3IGEdtpOs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
