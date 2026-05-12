@@ -197,7 +197,7 @@ Add your Google Maps API key to `android/app/src/main/AndroidManifest.xml` and `
 Place app image assets under `assets/images/` and register them in `pubspec.yaml`, then run:
 
 ```bash
-flutter run
+flutter run --dart-define=GOOGLE_MAPS_API_KEY=YOUR_API_KEY
 ```
 
 ---
