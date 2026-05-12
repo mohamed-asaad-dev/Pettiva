@@ -64,7 +64,7 @@ This is one of the more technically involved features in the app. Changing your 
 
 | 1. Verification sent (snackbar) | 2. Email arrives in inbox | 3. Firebase confirms in browser | 4. App detects confirmation & updates |
 |---|---|---|---|
-| ![Sent](lib/screenshots/screen_20_settings_verify_sent.png) | ![Email](lib/screenshots/screen_24_verification_email.jpeg) | ![Browser](lib/screenshots/screen_25_email_verified_browser.jpeg) | ![Updated](screenshots/screen_21_settings_email_updated.png) |
+| ![Sent](lib/screenshots/screen_20_settings_verify_sent.png) | ![Email](lib/screenshots/screen_24_verification_email.jpeg) | ![Browser](lib/screenshots/screen_25_email_verified_browser.jpeg) | ![Updated](lib/screenshots/screen_21_settings_email_updated.png) |
 
 After confirming, the user is prompted to log in again with the new email — auth state is fully consistent.
 
