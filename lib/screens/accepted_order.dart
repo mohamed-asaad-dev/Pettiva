@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:pettiva_v2/config/secrets.dart';
 
 class AcceptedOrder extends StatefulWidget {
   @override
@@ -48,7 +49,7 @@ class _AcceptedOrderScreen extends State<AcceptedOrder> {
             children: [
               ListTile(title: Text(order['address'] as String)),
               Image.network(
-                'https://maps.googleapis.com/maps/api/staticmap?center=${order['latitude']},${order['longitude']}&zoom=13&size=600x300&maptype=roadmap&markers=color:red%7Clabel:Here%7C${order['latitude']},${order['longitude']}&key=AIzaSyD6JQEllj0Y0wCs7KdP5MXhMGNSFAZgC3g',
+                'https://maps.googleapis.com/maps/api/staticmap?center=${order['latitude']},${order['longitude']}&zoom=13&size=600x300&maptype=roadmap&markers=color:red%7Clabel:Here%7C${order['latitude']},${order['longitude']}&key=${Secrets.googleMapsApiKey}',
               ),
               ElevatedButton(
                 onPressed: () {

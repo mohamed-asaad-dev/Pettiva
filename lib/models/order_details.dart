@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '../screens/pet_walking_screen.dart';
 
 class OrderDetails {
   OrderDetails(

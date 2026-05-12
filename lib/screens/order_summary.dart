@@ -4,8 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:pettiva_v2/models/order_details.dart';
 
-import 'package:pettiva_v2/screens/pet_walking_screen.dart';
-
 class OrderSummaryScreen extends ConsumerStatefulWidget {
   const OrderSummaryScreen({super.key});
 

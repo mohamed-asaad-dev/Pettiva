@@ -17,6 +17,7 @@ import 'package:pettiva_v2/screens/maps.dart';
 import 'package:pettiva_v2/screens/order_summary.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:http/http.dart' as http;
+import 'package:pettiva_v2/config/secrets.dart';
 
 enum ServiceType { standard, premium }
 
@@ -87,7 +88,7 @@ class _PetWalkingScreenState extends ConsumerState<PetWalkingScreen> {
 
     //this part is used for reverse geocoding
     final url = Uri.parse(
-      'https://maps.googleapis.com/maps/api/geocode/json?latlng=$lat,$lng&key=AIzaSyD6JQEllj0Y0wCs7KdP5MXhMGNSFAZgC3g',
+      'https://maps.googleapis.com/maps/api/geocode/json?latlng=$lat,$lng&key=${Secrets.googleMapsApiKey}',
     );
     final response = await http.post(url);
     final data = json.decode(response.body);
@@ -267,7 +268,6 @@ class _PetWalkingScreenState extends ConsumerState<PetWalkingScreen> {
                         ),
                       ),
                     ),
-                    //loction input widget
 
                     //information form
                     Form(
@@ -404,7 +404,7 @@ class _PetWalkingScreenState extends ConsumerState<PetWalkingScreen> {
                         ),
                         padding: EdgeInsets.all(25),
                         child: Image.network(
-                          'https://maps.googleapis.com/maps/api/staticmap?center=${clientLatitude!},${clientLongitude!}&zoom=13&size=600x300&maptype=roadmap&markers=color:red%7Clabel:Here%7C${clientLatitude!},${clientLongitude!}&key=AIzaSyD6JQEllj0Y0wCs7KdP5MXhMGNSFAZgC3g',
+                          'https://maps.googleapis.com/maps/api/staticmap?center=${clientLatitude!},${clientLongitude!}&zoom=13&size=600x300&maptype=roadmap&markers=color:red%7Clabel:Here%7C${clientLatitude!},${clientLongitude!}&key=${Secrets.googleMapsApiKey}',
                           fit: BoxFit.fill,
                         ),
                       ),

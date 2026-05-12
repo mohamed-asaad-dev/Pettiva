@@ -1,7 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:pettiva_v2/models/order_details.dart';
 import 'package:pettiva_v2/screens/accepted_order.dart';
 
 class FleetScreen extends StatefulWidget {
